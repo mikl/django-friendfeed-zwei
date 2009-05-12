@@ -7,7 +7,7 @@ class FriendFeedEntry(models.Model):
 
     Stores a post/tweet/whatever from FriendFeed.
     """
-    id = UUIDField(primary_key=True)
+    id = UUIDField(primary_key=True, auto=False)
     title = models.TextField()
     link = models.URLField(verify_exists=False, blank=True, null=True)
     published = models.DateTimeField()
@@ -18,7 +18,7 @@ class FriendFeedEntry(models.Model):
     service_name = models.CharField(max_length=150)
     service_icon_url = models.URLField(blank=True, null=True)
     service_profile_url = models.URLField(blank=True, null=True)
-    user_id = UUIDField(blank=True, null=True)
+    user_id = UUIDField(blank=True, null=True, auto=False)
     user_nickname = models.CharField(max_length=150, blank=True, null=True)
 
     class Meta:
