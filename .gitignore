@@ -1,0 +1,15 @@
+# Python bytecode
+*.py[co]
+
+# Miscelleleaneous IDE-cruft
+*.esproj
+*.kpf
+*.tmproj
+.cache
+.project
+.settings
+
+# Mac OS X cruft
+.DS_Store
+._*
+
